@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>wordcount</groupId>
+	<artifactId>wordcount-parent</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>Maven</name>
+	<url>http://maven.apache.org/maven2</url>
+	<inceptionYear>2001</inceptionYear>
+	<distributionManagement>
+		<site>
+			<id>website</id>
+			<url>scp://webhost.company.com/www/website</url>
+		</site>
+	</distributionManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<locales>en,fr</locales>
+				</configuration>
+			</plugin>
+			<!--  
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>-Dhttp.proxyHost=cache-etu.univ-lille1.fr -Dhttp.proxyPort=3128</argLine>
+				</configuration>
+			</plugin>
+			-->
+		</plugins>
+	</build>
+	<modules>
+		<module>wordcount-business</module>
+		<module>wordcount-webapp</module>
+	</modules>
+</project>
